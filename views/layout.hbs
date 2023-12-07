@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+		<title></title>
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
+
+		<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+<style>
+</style>
+<div id="container">
+	<header>
+			<h1><span>AIT</span>Y-THREE ISSA B</h1>
+			<h3>An anonymous course review site.</h3>
+	</header>
+
+	<form action="/" method="GET">
+    <label for="semester">Semester:</label>
+    <select name="semester">
+        <option value="All">All</option>
+        <option value="Spring">Spring</option>
+        <option value="Fall">Fall</option>
+        <!-- Add -->
+    </select>
+
+    <label for="year">Year:</label>
+    <input type="text" name="year" placeholder="Year">
+    
+    <label for="professor">Professor:</label>
+    <input type="text" name="professor" placeholder="Professor's Name">
+
+    <input type="submit" value="Filter">
+	</form>
+
+
+	<nav>
+		<ul>
+			<li><a href="/">All reviews</a></li>
+			<li><a href="/reviews/mine">My reviews</a></li>
+			<li><a href="/reviews/add">Add review!</a></li>
+		</ul>
+	</nav>
+	<div id="content">
+		{{{ body }}}
+	</div>
+</div>
+</body>
+
+<footer>
+    Your session's total page visits: {{pageVisits}}
+</footer>
+</html>
